@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); 
+.button{
+    display: inline-block;
+  height: 36;
+  padding: 10px 20px;
+  background-color: #d9d8dd;
+  font-family: 'roboto', sans-serif;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+.button:hover {
+  background-color: #400ac7;
+}
+
+a.hover-link {
+    display: inline-block;
+    font-family: 'roboto', sans-serif;
+    font-size: 13px;
+    color: rgba(85, 77, 77, 0.756);
+    text-decoration: none;          /* no underline by default */
+    border-radius: 6px;
+    font-weight: bold;
+    margin-right: 5px;             /* adds space bewteen links */
+}
+
+a.hover-link:link,
+a.hover-link:visited {
+    text-decoration: none;          /* no underline for link/visited states */
+}
+
+a.hover-link:hover {
+    text-decoration: underline;     /* underline only on hover */
+}
+
+.top-section-right{
+    display: flex;
+    height: 3vh;
+    justify-content: end;
+    align-items: center;
+    gap: 15px; /*space between items */
+}
+body{
+flex-direction: column;
+}
+
+.centre {
+  flex-direction: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* space between items */
+}
+
+.search-bar-tot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #dfe1e5;
+    gap: 1rem;
+    border-radius: 30px;
+    padding: 0.5rem 1.5rem;
+}
+
+.ai-mode{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: #dfe1e5;
+    border-radius: 20px;
+    font-family: 'roboto', sans-serif;
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+    
+}
+
+.ai-mode::after, .ai-mode::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), #1121d0, #c81a1a, #d9d43a, #46c622, #1121d0);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 5px;
+    border-radius: 20px;
+    animation: 3s spin linear infinite;
+}
+.ai-mode::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}
+
+.button-row{
+    display: flex;
+    gap: 10px; /*space between buttons*/
+}
+
+.search-bar{
+    width: 35rem;
+    height: 2rem;
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+}
+
+.multi-select{
+    width: 40px;
+    height: 40px;
+}
+
+.profile-pic{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 150%;
+    padding-right: 10px;
+}
+
+.magnifying-glass{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.google-logo{
+    width: 50rem;
+    height: 36.8rem;
+}
